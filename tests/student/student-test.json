@@ -1,0 +1,280 @@
+[
+    {
+        "name": "lcs-interleaved",
+        "input": {
+            "task": "lcs",
+            "a": "algorithm",
+            "b": "logarithm"
+        },
+        "output": {
+            "length": 7,
+            "sequence": "lgrithm"
+        }
+    },
+    {
+        "name": "merge-four-items",
+        "input": {
+            "task": "merge",
+            "sizes": [
+                5,
+                2,
+                8,
+                3
+            ]
+        },
+        "output": {
+            "cost": 36,
+            "plan": [
+                [
+                    0,
+                    0,
+                    1
+                ],
+                [
+                    2,
+                    2,
+                    3
+                ],
+                [
+                    0,
+                    1,
+                    2
+                ]
+            ]
+        }
+    },
+    {
+        "name": "tree-star",
+        "input": {
+            "task": "tree",
+            "n": 5,
+            "weights": [
+                8,
+                4,
+                6,
+                5,
+                7
+            ],
+            "edges": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    2
+                ],
+                [
+                    0,
+                    3
+                ],
+                [
+                    0,
+                    4
+                ]
+            ]
+        },
+        "output": {
+            "weight": 22,
+            "selected": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "name": "tree-chain",
+        "input": {
+            "task": "tree",
+            "n": 5,
+            "weights": [
+                3,
+                10,
+                4,
+                8,
+                6
+            ],
+            "edges": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    2
+                ],
+                [
+                    2,
+                    3
+                ],
+                [
+                    3,
+                    4
+                ]
+            ]
+        },
+        "output": {
+            "weight": 18,
+            "selected": [
+                1,
+                3
+            ]
+        }
+    },
+    {
+        "name": "naive-word",
+        "input": {
+            "task": "naive",
+            "text": "mississippi",
+            "pattern": "issi"
+        },
+        "output": {
+            "positions": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "name": "kmp-long-fallback",
+        "input": {
+            "task": "kmp",
+            "text": "abcxabcdabxabcdabcdabcy",
+            "pattern": "abcdabcy"
+        },
+        "output": {
+            "positions": [
+                15
+            ]
+        }
+    },
+    {
+        "name": "rk-sentence",
+        "input": {
+            "task": "rk",
+            "text": "the quick brown fox jumps",
+            "pattern": "fox"
+        },
+        "output": {
+            "positions": [
+                16
+            ]
+        }
+    },
+    {
+        "name": "suffix-mississippi",
+        "input": {
+            "task": "suffix",
+            "text": "mississippi"
+        },
+        "output": {
+            "sa": [
+                10,
+                7,
+                4,
+                1,
+                0,
+                9,
+                8,
+                6,
+                3,
+                5,
+                2
+            ],
+            "lcp": [
+                0,
+                1,
+                1,
+                4,
+                0,
+                0,
+                1,
+                0,
+                2,
+                1,
+                3
+            ],
+            "repeated": "issi"
+        }
+    },
+    {
+        "name": "aho-mixed-overlaps",
+        "input": {
+            "task": "aho",
+            "patterns": [
+                "aba",
+                "ba",
+                "a",
+                "bab"
+            ],
+            "texts": [
+                "abababa",
+                "baba",
+                "xyz"
+            ]
+        },
+        "output": {
+            "counts": [
+                [
+                    3,
+                    3,
+                    4,
+                    2
+                ],
+                [
+                    1,
+                    2,
+                    2,
+                    1
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ]
+        }
+    },
+    {
+        "name": "aho-prefix-chain",
+        "input": {
+            "task": "aho",
+            "patterns": [
+                "a",
+                "ab",
+                "abc",
+                "bc"
+            ],
+            "texts": [
+                "abcabc",
+                "zabc",
+                ""
+            ]
+        },
+        "output": {
+            "counts": [
+                [
+                    2,
+                    2,
+                    2,
+                    2
+                ],
+                [
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            ]
+        }
+    }
+]
